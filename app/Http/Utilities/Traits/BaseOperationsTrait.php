@@ -33,8 +33,8 @@ trait BaseOperationsTrait
      * @return array
      */
     public function paginate(
-        int $perPage = 15,
-        array $columns = ['*'],
+        int    $perPage = 15,
+        array  $columns = ['*'],
         string $orderBy = 'id',
         string $sortBy = 'desc'
     ): array
@@ -55,8 +55,8 @@ trait BaseOperationsTrait
      * @return array
      */
     public function findBy(
-        array $data,
-        array $columns = ['*'],
+        array  $data,
+        array  $columns = ['*'],
         string $orderBy = 'id',
         string $sortBy = 'desc'
     ): array
@@ -78,9 +78,9 @@ trait BaseOperationsTrait
      * @return LengthAwarePaginator
      */
     public function paginateBy(
-        array $data,
-        int $perPage = 15,
-        array $columns = ['*'],
+        array  $data,
+        int    $perPage = 15,
+        array  $columns = ['*'],
         string $orderBy = 'id',
         string $sortBy = 'desc'
     ): LengthAwarePaginator

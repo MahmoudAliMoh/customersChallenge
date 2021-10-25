@@ -3,8 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="0435720d-a606-49e0-9a43-77442335ba81" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styleci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesContract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesRepositoryContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesRepositoryContract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesServiceContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesServiceContract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Customers/CustomersContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/Customers/CustomersContract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Customers/CustomersRepositoryContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/Customers/CustomersRepositoryContract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Customers/CustomersServiceContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/Customers/CustomersServiceContract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/General/GeneralControllerContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/General/BaseControllerContract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/General/InitContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/General/BaseContract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CountriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CountriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CustomersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/Countries/CountriesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/Countries/CountriesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/Countries/CountriesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/Countries/CountriesService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/Customers/CustomersService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/Customers/CustomersService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Utilities/Traits/BaseOperationsTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Utilities/Traits/BaseOperationsTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Utilities/Traits/JsonResponseTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Utilities/Traits/ResponseTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,18 +156,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Contracts/Customers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Repositories/Customers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Repositories/Customers" />
       <recent name="$PROJECT_DIR$/app/Http/Contracts/Customers" />
       <recent name="$PROJECT_DIR$/resources/lang/en" />
       <recent name="$PROJECT_DIR$/app/Http/Utilities/Traits" />
       <recent name="$PROJECT_DIR$/app/Http/Contracts/Countries" />
-      <recent name="$PROJECT_DIR$/app/Http/Repositories/Countries" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Contracts/Common" />
@@ -174,7 +190,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635159163687</updated>
       <workItem from="1635159165340" duration="775000" />
-      <workItem from="1635161699183" duration="14832000" />
+      <workItem from="1635161699183" duration="18645000" />
     </task>
     <servers />
   </component>

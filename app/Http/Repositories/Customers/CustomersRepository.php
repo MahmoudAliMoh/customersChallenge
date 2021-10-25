@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Repositories\Countries;
+namespace App\Http\Repositories\Customers;
 
-use App\Http\Contracts\Countries\CountriesRepositoryContract;
+use App\Http\Contracts\Customers\CustomersRepositoryContract;
 use App\Http\Utilities\Traits\BaseOperationsTrait;
-use App\Models\Country;
+use App\Models\Customer;
 
-class CountriesRepository implements CountriesRepositoryContract
+class CustomersRepository implements CustomersRepositoryContract
 {
     /**
      * Trait of base CRUD operations.
@@ -14,20 +14,20 @@ class CountriesRepository implements CountriesRepositoryContract
     use BaseOperationsTrait;
 
     /**
-     * @var Country $model
+     * @var Customer $model
      */
     protected $model;
 
     /**
-     * @param Country $model
+     * @param Customer $model
      */
-    public function __construct(Country $model)
+    public function __construct(Customer $model)
     {
         $this->model = $model;
     }
 
     /**
-     * List all countries with specified columns.
+     * List all customers with specified columns.
      *
      * @param int $perPage
      * @param array $columns

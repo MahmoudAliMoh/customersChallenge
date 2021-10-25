@@ -4,12 +4,12 @@ namespace App\Http\Contracts\General;
 
 use Illuminate\Http\JsonResponse;
 
-interface InitContract
+interface BaseControllerContract
 {
     /**
      * List of countries.
      *
-     * @return array
+     * @return JsonResponse
      */
-    public function listCountries(): array;
+    public function list(): JsonResponse;
 }

@@ -5,16 +5,19 @@ namespace App\Http\Controllers\Api;
 use App\Http\Contracts\Countries\CountriesContract;
 use App\Http\Contracts\Countries\CountriesServiceContract;
 use App\Http\Controllers\Controller;
-use App\Http\Utilities\Traits\JsonResponseTrait;
+use App\Http\Utilities\Traits\ResponseTrait;
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 class CountriesController extends Controller implements CountriesContract
 {
-    use JsonResponseTrait;
+    /**
+     * Response trait for specific responses.
+     */
+    use ResponseTrait;
 
     /**
-     * @var CountriesServiceContract $countriesService
+     * @var CountriesServiceContract
      */
     protected $countriesService;
 
@@ -31,9 +34,9 @@ class CountriesController extends Controller implements CountriesContract
      *
      * @return JsonResponse
      */
-    public function listCountries(): JsonResponse
+    public function list(): JsonResponse
     {
-        $countries = $this->countriesService->listCountries();
+        $countries = $this->countriesService->list(20, ['id', 'name', 'code', 'regex'], 'id', 'desc');
         return $this->jsonApiResponse(trans('messages.list_countries'), $countries, Response::HTTP_OK);
     }
 }

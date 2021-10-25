@@ -5,7 +5,7 @@ namespace App\Http\Utilities\Traits;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\JsonResponse;
 
-trait JsonResponseTrait
+trait ResponseTrait
 {
     /**
      * Return API response with message, data and status code.

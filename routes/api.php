@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ * Route group for countries module.
+ */
 Route::middleware('throttle:60,1')->prefix('countries')->group(function () {
-    Route::get('/', 'Api\CountriesController@listCountries');
+    Route::get('/', 'Api\CountriesController@list');
+});
+
+/**
+ * Route group for customers module.
+ */
+Route::middleware('throttle:60,1')->prefix('customers')->group(function () {
+    Route::get('/', 'Api\CustomersController@list');
 });

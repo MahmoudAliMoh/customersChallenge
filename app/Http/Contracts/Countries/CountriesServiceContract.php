@@ -2,9 +2,9 @@
 
 namespace App\Http\Contracts\Countries;
 
-use App\Http\Contracts\General\InitContract;
+use App\Http\Contracts\General\BaseContract;
 
-interface CountriesServiceContract extends InitContract
+interface CountriesServiceContract extends BaseContract
 {
 
 }

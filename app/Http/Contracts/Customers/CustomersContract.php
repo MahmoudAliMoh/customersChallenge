@@ -2,9 +2,9 @@
 
 namespace App\Http\Contracts\Customers;
 
-use App\Http\Contracts\General\GeneralControllerContract;
+use App\Http\Contracts\General\BaseControllerContract;
 
-interface CustomersContract extends GeneralControllerContract
+interface CustomersContract extends BaseControllerContract
 {
 
 }

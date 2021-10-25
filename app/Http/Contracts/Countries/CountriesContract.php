@@ -2,9 +2,9 @@
 
 namespace App\Http\Contracts\Countries;
 
-use App\Http\Contracts\General\GeneralControllerContract;
+use App\Http\Contracts\General\BaseControllerContract;
 
-interface CountriesContract extends GeneralControllerContract
+interface CountriesContract extends BaseControllerContract
 {
 
 }
