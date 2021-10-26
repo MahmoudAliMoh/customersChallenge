@@ -13,5 +13,5 @@ interface CountriesRepositoryContract extends BaseContract
      * @param array $columns
      * @return array
      */
-    public function show(int $id, array $columns):array;
+    public function show(int $id, array $columns): array;
 }

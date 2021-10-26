@@ -11,7 +11,8 @@ interface CustomersServiceContract extends BaseContract
      *
      * @param array $customers
      * @param array $countries
+     * @param array $request
      * @return array
      */
-    public function mapCustomerNumbers(array $customers, array $countries): array;
+    public function mapCustomerNumbers(array $customers, array $countries, array $request): array;
 }

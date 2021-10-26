@@ -2,8 +2,10 @@
 
 namespace App\Http\Services\Customers;
 
+use App\Http\Contracts\Countries\CountriesRepositoryContract;
 use App\Http\Contracts\Customers\CustomersRepositoryContract;
 use App\Http\Contracts\Customers\CustomersServiceContract;
+use App\Http\Transformers\Customers\CustomersTransformer;
 
 class CustomersService implements CustomersServiceContract
 {
@@ -13,11 +15,21 @@ class CustomersService implements CustomersServiceContract
     protected $customersRepository;
 
     /**
-     * @param CustomersRepositoryContract $customersRepository
+     * @var CustomersTransformer
      */
-    public function __construct(CustomersRepositoryContract $customersRepository)
+    protected $transformer;
+
+    /**
+     * @param CustomersRepositoryContract $customersRepository
+     * @param CustomersTransformer $transformer
+     */
+    public function __construct(
+        CustomersRepositoryContract $customersRepository,
+        CustomersTransformer $transformer
+    )
     {
         $this->customersRepository = $customersRepository;
+        $this->transformer = $transformer;
     }
 
     /**
@@ -38,26 +50,11 @@ class CustomersService implements CustomersServiceContract
      *
      * @param array $customers
      * @param array $countries
+     * @param array $request
      * @return array
      */
-    public function mapCustomerNumbers(array $customers, array $countries): array
+    public function mapCustomerNumbers(array $customers, array $countries, array $request): array
     {
-        $mappedNumbers = [];
-
-        foreach ($customers as $customer) {
-            list($code, $number) = explode(' ', $customer['phone']);
-            $phoneCode = str_replace(array('(', ')'), '', $code);
-
-            foreach ($countries as $country) {
-                if ($country['code'] == $phoneCode) {
-                    $map['country'] = $country['name'];
-                    $map['code'] = $phoneCode;
-                    $map['phone'] = $number;
-                    array_push($mappedNumbers, $map);
-                }
-            }
-        }
-
-        return  $mappedNumbers;
+        return $this->transformer->transform($customers, $countries);
     }
 }

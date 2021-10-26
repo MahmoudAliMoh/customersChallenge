@@ -3,15 +3,14 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Contracts\Countries\CountriesServiceContract;
-use App\Http\Contracts\Customers\CustomersContract;
 use App\Http\Contracts\Customers\CustomersServiceContract;
 use App\Http\Controllers\Controller;
 use App\Http\Utilities\Traits\ResponseTrait;
 use Illuminate\Http\JsonResponse;
-use Mockery\Exception;
+use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class CustomersController extends Controller implements CustomersContract
+class CustomersController extends Controller
 {
     /**
      * Response trait for specific responses.
@@ -41,15 +40,20 @@ class CustomersController extends Controller implements CustomersContract
     /**
      * Filter customer phone numbers by country code and validity.
      *
+     * @param Request $request
      * @return JsonResponse
      */
-    public function numbersLookup(): JsonResponse
+    public function numbersLookup(Request $request): JsonResponse
     {
-        $customers = $this->customerService->list(['name', 'phone'], 'id', 'desc');
-        $countries = $this->countriesService->list(['name', 'code', 'regex'], 'id', 'desc');
+        try {
+            $customers = $this->customerService->list(['name', 'phone'], 'id', 'desc');
+            $countries = $this->countriesService->list(['id', 'name', 'code', 'regex'], 'id', 'desc');
+            $mappedNumbers = $this->customerService->mapCustomerNumbers($customers, $countries, $request->all());
 
-        $mappedNumbers = $this->customerService->mapCustomerNumbers($customers, $countries);
+            return $this->jsonApiResponse(trans('messages.list_customers_numbers'), $mappedNumbers, Response::HTTP_OK);
 
-        dd($mappedNumbers);
+        } catch (\Exception $exception) {
+            return $this->jsonApiResponse(trans('messages.list_customers_numbers'), $exception, Response::HTTP_BAD_REQUEST);
+        }
     }
 }
