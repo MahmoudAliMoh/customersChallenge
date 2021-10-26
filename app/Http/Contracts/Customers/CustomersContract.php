@@ -2,9 +2,14 @@
 
 namespace App\Http\Contracts\Customers;
 
-use App\Http\Contracts\General\BaseControllerContract;
+use Illuminate\Http\JsonResponse;
 
-interface CustomersContract extends BaseControllerContract
+interface CustomersContract
 {
-
+    /**
+     * Filter customers phone numbers.
+     *
+     * @return JsonResponse
+     */
+    public function numbersLookup(): JsonResponse;
 }

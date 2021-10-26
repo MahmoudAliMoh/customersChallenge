@@ -23,14 +23,25 @@ class CountriesService implements CountriesServiceContract
     /**
      * List of countries.
      *
-     * @param int $perPage
      * @param array $columns
      * @param string $orderBy
      * @param string $sortBy
      * @return array
      */
-    public function list(int $perPage, array $columns, string $orderBy, string $sortBy): array
+    public function list(array $columns, string $orderBy, string $sortBy): array
     {
-        return $this->countriesRepository->list($perPage, $columns, $orderBy, $sortBy);
+        return $this->countriesRepository->list($columns, $orderBy, $sortBy);
+    }
+
+    /**
+     * Find country by $id
+     *
+     * @param int $id
+     * @param array $columns
+     * @return array
+     */
+    public function show(int $id, array $columns): array
+    {
+        return $this->show($id, $columns);
     }
 }

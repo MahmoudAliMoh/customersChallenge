@@ -37,7 +37,7 @@ class CountriesController extends Controller implements CountriesContract
     public function list(): JsonResponse
     {
         try {
-            $countries = $this->countriesService->list(20, ['id', 'name', 'code', 'regex'], 'id', 'desc');
+            $countries = $this->countriesService->list(['id', 'name', 'code', 'regex'], 'id', 'desc');
             return $this->jsonApiResponse(trans('messages.list_countries'), $countries, Response::HTTP_OK);
         } catch (\Exception $exception) {
             return $this->jsonApiResponse(trans('messages.list_countries'), $exception, Response::HTTP_BAD_REQUEST);

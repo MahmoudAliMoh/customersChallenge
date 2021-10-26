@@ -24,5 +24,5 @@ Route::middleware('throttle:60,1')->prefix('countries')->group(function () {
  * Route group for customers module.
  */
 Route::middleware('throttle:60,1')->prefix('customers')->group(function () {
-    Route::get('/', 'Api\CustomersController@list');
+    Route::get('/numbers-lookup', 'Api\CustomersController@numbersLookup');
 });

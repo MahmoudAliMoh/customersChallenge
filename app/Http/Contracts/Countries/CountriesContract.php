@@ -2,9 +2,14 @@
 
 namespace App\Http\Contracts\Countries;
 
-use App\Http\Contracts\General\BaseControllerContract;
+use Illuminate\Http\JsonResponse;
 
-interface CountriesContract extends BaseControllerContract
+interface CountriesContract
 {
-
+    /**
+     * List of countries.
+     *
+     * @return JsonResponse
+     */
+    public function list(): JsonResponse;
 }

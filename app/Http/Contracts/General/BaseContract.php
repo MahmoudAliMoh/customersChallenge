@@ -9,11 +9,10 @@ interface BaseContract
     /**
      * List of countries.
      *
-     * @param int $perPage
      * @param array $columns
      * @param string $orderBy
      * @param string $sortBy
      * @return array
      */
-    public function list(int $perPage, array $columns, string $orderBy, string $sortBy): array;
+    public function list(array $columns, string $orderBy, string $sortBy): array;
 }
