@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Contracts\Countries\CountriesServiceContract;
-use App\Http\Contracts\Customers\CustomersServiceContract;
+use App\Contracts\Countries\CountriesServiceContract;
+use App\Contracts\Customers\CustomersServiceContract;
 use App\Http\Controllers\Controller;
 use App\Http\Utilities\Traits\ResponseTrait;
 use Illuminate\Http\JsonResponse;
