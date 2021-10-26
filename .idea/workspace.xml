@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0435720d-a606-49e0-9a43-77442335ba81" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesContract.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesRepositoryContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesRepositoryContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesServiceContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/Countries/CountriesServiceContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Customers/CustomersContract.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Customers/CustomersServiceContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Contracts/Customers/CustomersServiceContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Contracts/Customers/FilterContract.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CountriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CountriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CustomersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/Customers/CustomersService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/Customers/CustomersService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Utilities/Helpers/PhoneNumbersHelper.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Utilities/Traits/BaseOperationsTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Utilities/Traits/BaseOperationsTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +176,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635159163687</updated>
       <workItem from="1635159165340" duration="775000" />
-      <workItem from="1635161699183" duration="38011000" />
+      <workItem from="1635161699183" duration="38406000" />
     </task>
     <servers />
   </component>
