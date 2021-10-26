@@ -6,6 +6,8 @@ use App\Http\Contracts\Countries\CountriesRepositoryContract;
 use App\Http\Contracts\Countries\CountriesServiceContract;
 use App\Http\Contracts\Customers\CustomersRepositoryContract;
 use App\Http\Contracts\Customers\CustomersServiceContract;
+use App\Http\Contracts\Customers\FilterCustomersContract;
+use App\Http\Filters\Customers\FilterCustomers;
 use App\Http\Repositories\Countries\CountriesRepository;
 use App\Http\Repositories\Customers\CustomersRepository;
 use App\Http\Services\Countries\CountriesService;
@@ -36,5 +38,6 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->bind(CustomersRepositoryContract::class, CustomersRepository::class);
         $this->app->bind(CustomersServiceContract::class, CustomersService::class);
+        $this->app->bind(FilterCustomersContract::class, FilterCustomers::class);
     }
 }

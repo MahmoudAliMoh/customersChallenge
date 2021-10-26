@@ -5,6 +5,7 @@ namespace App\Http\Services\Customers;
 use App\Http\Contracts\Countries\CountriesRepositoryContract;
 use App\Http\Contracts\Customers\CustomersRepositoryContract;
 use App\Http\Contracts\Customers\CustomersServiceContract;
+use App\Http\Contracts\Customers\FilterCustomersContract;
 use App\Http\Transformers\Customers\CustomersTransformer;
 
 class CustomersService implements CustomersServiceContract
@@ -20,16 +21,32 @@ class CustomersService implements CustomersServiceContract
     protected $transformer;
 
     /**
+     * @var CountriesRepositoryContract
+     */
+    protected $countriesRepository;
+
+    /**
+     * @var FilterCustomersContract
+     */
+    protected $filterCustomers;
+
+    /**
      * @param CustomersRepositoryContract $customersRepository
      * @param CustomersTransformer $transformer
+     * @param CountriesRepositoryContract $countriesRepository
+     * @param FilterCustomersContract $filterCustomers
      */
     public function __construct(
         CustomersRepositoryContract $customersRepository,
-        CustomersTransformer $transformer
+        CustomersTransformer        $transformer,
+        CountriesRepositoryContract $countriesRepository,
+        FilterCustomersContract     $filterCustomers
     )
     {
         $this->customersRepository = $customersRepository;
         $this->transformer = $transformer;
+        $this->countriesRepository = $countriesRepository;
+        $this->filterCustomers = $filterCustomers;
     }
 
     /**
@@ -55,6 +72,11 @@ class CustomersService implements CustomersServiceContract
      */
     public function mapCustomerNumbers(array $customers, array $countries, array $request): array
     {
-        return $this->transformer->transform($customers, $countries);
+        $mappedData = $this->transformer->transform($customers, $countries);
+        if (!empty($request['country_id']) || $request['state']) {
+            $countryRegex = $this->countriesRepository->show($request['country_id'], ['regex']);
+            return $this->filterCustomers->apply($mappedData, $countryRegex['regex'], $request['state']);
+        }
+        return $mappedData;
     }
 }
