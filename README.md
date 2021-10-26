@@ -21,6 +21,10 @@ run `composer install`
 
 Change `.env.example` file to `.env`
 
+run `php artisan key:generate`
+
+run `php artisan db:seed`
+
 Set the DB absolute path in DB_DATABASE `.env` file 
 
 run `php artisan serve`
