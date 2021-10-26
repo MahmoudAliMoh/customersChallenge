@@ -51,7 +51,6 @@ class CustomersController extends Controller
             $mappedNumbers = $this->customerService->mapCustomerNumbers($customers, $countries, $request->all());
 
             return $this->jsonApiResponse(trans('messages.list_customers_numbers'), $mappedNumbers, Response::HTTP_OK);
-
         } catch (\Exception $exception) {
             return $this->jsonApiResponse(trans('messages.list_customers_numbers'), $exception, Response::HTTP_BAD_REQUEST);
         }

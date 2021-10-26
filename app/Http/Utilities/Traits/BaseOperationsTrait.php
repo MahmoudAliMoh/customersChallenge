@@ -37,8 +37,7 @@ trait BaseOperationsTrait
         array $columns = ['*'],
         string $orderBy = 'id',
         string $sortBy = 'desc'
-    ): array
-    {
+    ): array {
         $result = $this->model->select($columns)->orderBy($orderBy, $sortBy)->paginate($perPage);
 
         return $this->toArray($result);

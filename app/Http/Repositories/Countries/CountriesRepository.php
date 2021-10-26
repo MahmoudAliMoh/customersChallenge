@@ -48,5 +48,4 @@ class CountriesRepository implements CountriesRepositoryContract
     {
         return $this->find($id, $columns);
     }
-
 }

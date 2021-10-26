@@ -41,8 +41,7 @@ class CustomersService implements CustomersServiceContract
         CustomersTransformer        $transformer,
         CountriesRepositoryContract $countriesRepository,
         FilterCustomersContract     $filterCustomers
-    )
-    {
+    ) {
         $this->customersRepository = $customersRepository;
         $this->transformer = $transformer;
         $this->countriesRepository = $countriesRepository;

@@ -38,5 +38,4 @@ class CustomersRepository implements CustomersRepositoryContract
     {
         return $this->all($columns, $orderBy, $sortBy);
     }
-
 }
