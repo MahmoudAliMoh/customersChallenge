@@ -2,7 +2,7 @@
 Application That List, Validate  and filter Customers phone numbers .
 
 ### Technologies
-laravel Framework
+Laravel Framework
 
 ### Prerequisites
 PHP 7.4
