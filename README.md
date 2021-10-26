@@ -15,7 +15,7 @@ Composer
 
 ### Installation
 
-Clone the project 
+Clone the project `main` branch
 
 run `composer install`
 
