@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+/**
+ * Route group for countries module.
+ */
+Route::middleware('throttle:60,1')->prefix('countries')->group(function () {
+    Route::get('/', 'Api\CountriesController@list');
+});
+
+/**
+ * Route group for customers module.
+ */
+Route::middleware('throttle:60,1')->prefix('customers')->group(function () {
+    Route::get('/numbers-lookup', 'Api\CustomersController@numbersLookup');
 });
